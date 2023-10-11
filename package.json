@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {
-    "react": "^18.2.0"
+  "msw": {
+    "workerDirectory": "public"
   }
 }
