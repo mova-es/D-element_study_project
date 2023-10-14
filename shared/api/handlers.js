@@ -18,8 +18,7 @@ export const handlers = [
     if (!isAuthenticated) {
       // If not authenticated, respond with a 403 error
       return res(
-        ctx.status(403),
-        ctx.json({
+        ctx.status(403), ctx.json({
           errorMessage: "Not authorized",
         }),
       )
@@ -27,8 +26,7 @@ export const handlers = [
 
     // If authenticated, return a mocked user details
     return res(
-      ctx.status(200),
-      ctx.json({
+      ctx.status(200), ctx.json({
         username: "admin",
       }),
     )
