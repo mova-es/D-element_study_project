@@ -1,5 +1,6 @@
 import { withNaming } from "@bem-react/classname"
-import { metatag } from "./meta.js"
+import { metatag, getMetaTags } from "./meta.js"
+
 
 export const getPage = ({ body = ``, title = ``, meta = metatag }) => {
     return `
@@ -8,7 +9,7 @@ export const getPage = ({ body = ``, title = ``, meta = metatag }) => {
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" />
-    <meta ${meta.map(item => item)} />
+    ${getMetaTags(meta)}
     <title>${title}</title>
     <script src="../app/main.js" defer type="module"></script>
 </head>
@@ -37,7 +38,7 @@ export const commonComponentProps = {
 export const getAttrs = (attrs) => {
     const result = []
     Object.entries(attrs).forEach(([ key, value ]) => {
-        result.push(`${key}=${value}`)
+        result.push(`${key}=${value}`);
     })
     return result.join(" ")
 }

@@ -20,6 +20,9 @@ export default () => {
                 extraAttrs: {
                     "data-js-require": true,
                     "id": "btn"
+                },
+                extraClasses: {
+                    isHidden: false,
                 }
             })}
             <nav>
