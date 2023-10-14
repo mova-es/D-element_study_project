@@ -1,7 +1,7 @@
 export const runApp = async () => {
     switch (process.env.NODE_ENV) {
         case "development":
-            await import("./browser.js")
+            await import("../../shared/api/browser.js")
                 .then(async ({ worker }) => {
                     await worker.start().then(() => {
                         console.debug("App dev run")
