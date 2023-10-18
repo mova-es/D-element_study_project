@@ -7,7 +7,6 @@ export const getPage = ({ body = ``, title = ``, meta = metatag }) => {
     <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" />
     ${getMetaTags(meta)}
     <title>${title}</title>
@@ -23,7 +22,7 @@ export const getPage = ({ body = ``, title = ``, meta = metatag }) => {
 export const commonComponentProps = {
     extraClasses: {},
     extraAttrs: {},
-    children: "",
+    children: ``,
     getCN: (block = "", elem = "", mod = {}) => {
         console.debug(block, elem, mod)
         return withNaming({

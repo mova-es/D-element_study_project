@@ -1,4 +1,5 @@
 export const metatag = { 
+    charset: "UTF-8",
     name: "viewport" ,
     content: "width=device-width, initial-scale=1.0" 
 }
@@ -6,7 +7,7 @@ export const metatag = {
 export function getMetaTags(obj) {
     const result = []
     Object.entries(obj).forEach(([ key, value ]) => {
-        result.push(`<meta ${key}="${value}"/>`)
+        result.push(`${key}="${value}"`)
     })
-    return result.join(" ")
+    return `<meta ${result.join(" ")} />` 
 }

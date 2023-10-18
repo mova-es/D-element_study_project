@@ -12,7 +12,8 @@ export default () => {
                 type: "text",
                 extraAttrs: {
                     "data-js-require": true,
-                    "id": "input"
+                    "id": "input",
+                    "placeholder": "Введите&nbsp;имя",
                 }
             })}
             ${Button({
@@ -23,6 +24,7 @@ export default () => {
                 },
                 extraClasses: {
                     isHidden: false,
+                    isDisabled: false,
                 }
             })}
             <nav>
