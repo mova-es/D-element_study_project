@@ -17,7 +17,19 @@ export function Header(props) {
             <div class="${getClassName("logo", { isValid: true })}">
                 ${Logo({ imgSrc: "/icons/logo.svg" })}
             </div>
-            <div class="${getClassName("nav")}">Nav</div>
+            <div class="${getClassName("nav")}">
+                <ul>
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/about.html">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="/">Корзина</a>
+                    </li>
+                </ul>
+            </div>
             </header>
             `
 }
