@@ -12,7 +12,7 @@ export function Footer(props) {
     const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
 
     return `
-            <footer  class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-header="" >
+        <footer  class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-header="" >
             
             <div class="${getClassName("main")}">
                 <ul>
@@ -31,16 +31,26 @@ export function Footer(props) {
                 </ul>
             </div>
             <div class="${getClassName("aux")}">
-                <ul>
-                    <li>
-                        <a href="#">Адрес</a>
-                    </li>
-                    <li>
-                        <a href="#">Почта</a>
-                    </li>
-                    
-                </ul>
+                <div class="${getClassName("aux-item")}">
+                    <dl class="datalist">
+                        <dt class="datalist__label">Наш адрес</dt>
+                        <dd class="datalist__content">
+                        <address class="address" ${getAttrs(extraAttrs)} data-js-picker-current-address="" >г. Челябинск, ул. Лесопарковая, 5/2</address>
+                        </dd>
+                    </dl>
+                </div>
+            
+                <div class="${getClassName("aux-item")}">
+                    <dl class="datalist">
+                        <dt class="datalist__label">Эл.почта</dt>
+                        <dd class="datalist__content">
+                            <div class="email">
+                                <a rel="contact" href="mailto:info@d-element.ru" class="email__link">info@d-element.ru</a>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
             </div>
-            </footer>
-            `
+        </footer>
+         `
 }

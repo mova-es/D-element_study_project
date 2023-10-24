@@ -26,7 +26,7 @@ export function Header(props) {
                         <a href="/about.html">Каталог</a>
                     </li>
                     <li>
-                        <a href="/">Корзина</a>
+                        <a class="${getClassName("cart")}" href="/">Корзина</a>
                     </li>
                 </ul>
             </div>

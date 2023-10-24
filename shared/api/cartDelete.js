@@ -1,0 +1,1 @@
+fetch("cart/1", { method: "DELETE" })

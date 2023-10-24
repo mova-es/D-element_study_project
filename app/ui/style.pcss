@@ -2,20 +2,48 @@
 @import "../../widgets/footer/footer.pcss";
 
 * {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
   text-decoration: none;
   text-transform: none;
   list-style-type: none;
 }
 
 body {
-  background-color: rgb(59, 58, 58);
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 a, p {
   font-size: 18px;
-  color: white;
+  color: black;
+  text-decoration: none;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+label {
+  cursor: pointer;
 }
 
 .hero {

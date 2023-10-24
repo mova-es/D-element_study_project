@@ -1,6 +1,13 @@
 import { rest } from "msw"
 
 export const handlers = [
+
+  rest.delete("/cart/:id", (req, res, ctx) => {
+    return res(
+      ctx.status(200)
+    )
+  }),
+
   rest.post("/cartSubmit", (req, res, ctx) => {
     return res(
       ctx.status(200)

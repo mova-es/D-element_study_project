@@ -1,12 +1,9 @@
-const item = {
-    name: "book",
-    id: 37
-};
+const data = { id: 1, name: "book" };
 
-const data = JSON.stringify(item);
-const xhr = new XMLHttpRequest();
- 
-xhr.open("POST", "/cartSubmit");
-xhr.setRequestHeader("Content-Type", "application/json");
- 
-xhr.send(data);
+fetch("/cartSubmit", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(data),
+})

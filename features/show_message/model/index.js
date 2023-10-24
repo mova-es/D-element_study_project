@@ -1,5 +1,5 @@
 export function ClicktoButton () {
-    document.addEventListener("DOMContentLoaded", (event) => {
+    document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector(".btn")
     const inputEl = document.querySelector(".input")
     const bodyEl = document.querySelector("body")
