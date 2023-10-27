@@ -10,7 +10,7 @@ export const getPage = ({ body = ``, title = ``, meta = metatag }) => {
     <link rel="icon" href="/favicon.ico" />
     ${getMetaTags(meta)}
     <title>${title}</title>
-    <script src="../app/main.js" defer type="module"></script>
+    <script src="../app/api/App.js" defer type="module"></script>
 </head>
 <body>
     ${body}

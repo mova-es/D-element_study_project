@@ -13,6 +13,9 @@ export default () => {
                     <li>
                         <a href="/about.html">Каталог</a>
                     </li>
+                    <li>
+                        <a href="/catalog.html">Каталог</a>
+                    </li>
                 </ul>
             </nav>
         `
