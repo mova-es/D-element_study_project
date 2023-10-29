@@ -1,10 +1,12 @@
 import HeaderModel from "../../widgets/header/model/index.js"
 import FilterModel from "../../widgets/filter/model/index.js"
+// import { GetDataFromServer } from "../../features/CardRender/index.js"
 
 export const runApp = async () => {
     const runWidgets = async () => {
         new HeaderModel()
         new FilterModel()
+        // GetDataFromServer()
         await Promise.all(Object.keys(import.meta.glob("../../**/*.pcss", { "query": "?inline" })).map(path => import(`${path}`).then((module) => module?.default ?? module)))
     }
     switch (process.env.NODE_ENV) {

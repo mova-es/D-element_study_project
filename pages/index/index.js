@@ -1,6 +1,5 @@
 import { getPage } from "../../shared/lib/index.js"
 import { Button } from "../../shared/ui/button/index.js"
-import { Input } from "../../shared/ui/input/index.js"
 import { Header } from "../../widgets/header/index.js"
 import { Footer } from "../../widgets/footer/index.js"
 
@@ -11,15 +10,7 @@ export default () => {
         body: `
         ${Header()}
             <div class="hero">
-            <h1>Главная</h1>
-            ${Input({
-                type: "text",
-                extraAttrs: {
-                    "data-js-require": true,
-                    "id": "input",
-                    "placeholder": "Введите&nbsp;имя",
-                }
-            })}
+            <h1>Популярные товары</h1>
             ${Button({
                 label: "Тест",
                 extraAttrs: {

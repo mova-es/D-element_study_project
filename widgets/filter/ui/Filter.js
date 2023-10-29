@@ -5,7 +5,7 @@ export function Filter(props) {
     const {
         extraClasses = {},
         extraAttrs = {},
-        baseClass = "filter",
+        baseClass = "catalog__filter",
         getCN,
         category
     } = { ...commonComponentProps, ...props }

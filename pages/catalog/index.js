@@ -2,7 +2,6 @@ import { getPage } from "../../shared/lib/index.js";
 import { Filter } from "../../widgets/filter/index.js";
 import { Header } from "../../widgets/header/index.js";
 import { Footer } from "../../widgets/footer/index.js";
-import { CreateCardTemplate } from "../../entities/productCard/ui/index.js";
 
 const cat = [
   {
@@ -48,10 +47,12 @@ export default () => {
         ${Header()}
         <section class="catalog">
         <div class="container">
-        <h1 class="heading">Каталог</h1>
+        <h1 class="catalog__heading">Каталог</h1>
+        <div class="catalog__main">
         ${Filter({ category: cat })}
-        ${CreateCardTemplate()}
-
+        <div class="catalog__cards">
+        </div>
+        </div>
         </div>
         </div>
         </section>
