@@ -11,12 +11,13 @@ export const CardTemplate = (props) => {
         img,
         cardLabel,
         cardName,
+        additionalClasses
     } = { ...commonComponentProps, ...props }
 
     const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
 
     return `
-        <div class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-card="" >
+        <div class="${getClassName("", extraClasses)} ${additionalClasses}" ${getAttrs(extraAttrs)} data-js-card="" >
             <img class="${getClassName("img")}" src="${img}">
             <div class="${getClassName("description")}">
             <p class="${getClassName("label")}">${cardLabel}</p>

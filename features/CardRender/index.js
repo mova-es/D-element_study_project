@@ -1,11 +1,15 @@
 import { CardTemplate } from "../../entities/productCard/ui/index.js" 
 
-export async function DataRender () {
-    const response = await fetch("/catalog").then(res => res.json())
-    return response.data.forEach(item => 
-        CardTemplate({
+export async function CardRender (path, selector, addedClasses) {
+    const cardsEl = document.querySelector(selector)
+
+    const productsArray = []
+    const response = await fetch(path).then(res => res.json())
+    response.data.forEach(item => productsArray.push(CardTemplate({
             img: item.imageSrc,
             cardLabel: item.label,
-            cardName: item.productName
-        }))
+            cardName: item.productName,
+            additionalClasses: addedClasses
+        })))
+    cardsEl.innerHTML = productsArray.join("")
 }

@@ -1,7 +1,7 @@
-import "swiper/pcss";
 import { slidersInit } from "../../shared/lib/slider.js";
 
-slidersInit(".popular__slider", {
+export function sliderFeature() {
+  slidersInit(".popular__cards", {
     breakpoints: {
       768: {
         slidesPerView: "auto",
@@ -19,5 +19,4 @@ slidersInit(".popular__slider", {
       },
     },
   });
- 
-  
+} 

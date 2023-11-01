@@ -1,3 +1,4 @@
+import "swiper/css";
 import { Swiper, Autoplay } from "swiper";
 
 const params = {
@@ -7,7 +8,7 @@ const params = {
         delay: 3500,
         disableOnInteraction: false,
     },
-    slidesPerView: 1,
+    slidesPerView: 2,
     modules: [ Autoplay ]
 };
 

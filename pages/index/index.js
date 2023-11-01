@@ -1,7 +1,7 @@
 import { getPage } from "../../shared/lib/index.js"
-import { Button } from "../../shared/ui/button/index.js"
 import { Header } from "../../widgets/header/index.js"
 import { Footer } from "../../widgets/footer/index.js"
+import { Popular } from "../../widgets/popular/index.js"
 
 export default () => {
 
@@ -11,19 +11,8 @@ export default () => {
         ${Header()}
             <div class="hero">
             <h1>Популярные товары</h1>
-            ${Button({
-                label: "Тест",
-                extraAttrs: {
-                    "data-js-require": true,
-                    "id": "btn"
-                },
-                extraClasses: {
-                    isHidden: false,
-                    isDisabled: false,
-                }
-            })}
+            ${Popular()}
             </div>
-            
             ${Footer()}
         `
     })
