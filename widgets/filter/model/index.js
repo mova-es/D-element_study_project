@@ -1,4 +1,5 @@
 import { CardRender } from "../../../features/CardRender/index.js";
+import { FilteredCardRender } from "../../../features/FilteredCardRender/index.js";
 
 export default class FilterModel {
   static selectors = {
@@ -30,12 +31,17 @@ export default class FilterModel {
   init() {
     this.inputs.forEach((input) => {
       input.addEventListener("change", (e) => {
-        if (e.target.checked === true) {
-          this.url.searchParams.set("id", `${this.getSearchParam(e.target)}`)
-         console.log(this.url.toString())
-          CardRender(this.url.toString())
+        if (e.target.value !== "all" && e.target.checked === true) {
+          this.inputs[0].checked = false
+          this.url.searchParams.append("id", `${this.getSearchParam(e.target)}`)
+          FilteredCardRender(this.url, this.selector, this.addedClasses)
+
         } else if (e.target.checked === false) {
           this.url.searchParams.delete("id", `${this.getSearchParam(e.target)}`)
+          FilteredCardRender(this.url, this.selector, this.addedClasses)
+
+        } else if (e.target.value === "all" && e.target.checked === true) {
+          CardRender(this.path, this.selector, this.addedClasses)
         }
       })
     })

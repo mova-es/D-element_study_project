@@ -1,5 +1,4 @@
-import "swiper/css";
-import { Swiper, Autoplay } from "swiper";
+import { Swiper } from "swiper";
 
 const params = {
     spaceBetween: 20,
@@ -9,7 +8,6 @@ const params = {
         disableOnInteraction: false,
     },
     slidesPerView: 2,
-    modules: [ Autoplay ]
 };
 
 export const slidersInit = (selectorSlider, newParams) => {

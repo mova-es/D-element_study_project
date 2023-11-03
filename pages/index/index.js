@@ -10,8 +10,10 @@ export default () => {
         body: `
         ${Header()}
             <div class="hero">
+            <div class="container">
             <h1>Популярные товары</h1>
             ${Popular()}
+            </div>
             </div>
             ${Footer()}
         `
