@@ -29,6 +29,7 @@ export function Footer(props) {
                         <a href="#">Контакты</a>
                     </li>
                 </ul>
+                <a href="#">Политика конфиденциальности</a>
             </div>
             <div class="${getClassName("aux")}">
                 <div class="${getClassName("aux-item")}">
