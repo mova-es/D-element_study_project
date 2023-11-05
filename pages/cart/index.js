@@ -1,6 +1,8 @@
 import { getPage } from "../../shared/lib/index.js";
 import { Header } from "../../widgets/header/index.js";
 import { Footer } from "../../widgets/footer/index.js";
+import { Cart } from "../../widgets/cart/ui/Cart.js";
+
 
 export default () => {
 
@@ -8,11 +10,12 @@ export default () => {
         title: "Корзина",
         body: `
         ${Header()}
-            <div class="cart">
-                <h1 class="cart__heading">Корзина</h1>
-                <div class="container">
-                </div>
-            </div>
+        ${Cart()}
+        <a href="catalog.html">
+        <svg class="icon" width="24" height="24">
+        <use xlink:href="icons/icons.svg#arrow-left"></use>
+        </svg>
+        Продолжить покупки</a>
         ${Footer()}
         `
     })

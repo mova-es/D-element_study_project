@@ -16,7 +16,6 @@ export default class FilterModel {
     this.instance = document.querySelector(FilterModel.selectors.instanceSelector)
     this.inputs = Array.from(document.querySelectorAll(`[${FilterModel.selectors.checkboxSelector}]`))
     this.url = new URL("/catalog", window.location.href)
-    // this.params = new URLSearchParams(this.url.search)
     this.init()
     this.selector = ".catalog__cards"
     this.path = "/catalog"

@@ -3,7 +3,6 @@
 export default class CartModel {
   static selectors = {
     instanceSelector: "[data-js-cart]",
-    checkboxSelector: "data-js-search-param",
   };
 
   static instance = null;
