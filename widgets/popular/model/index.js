@@ -1,3 +1,4 @@
+import { AddItemToCart } from "../../../features/AddItemToCart/index.js";
 import { PopularCardRender } from "../../../features/PopularCardRender/index.js";
 import { sliderFeature } from "../../../features/Slider/index.js";
 
@@ -16,5 +17,6 @@ export default class PopularModel {
     this.addedClasses = "swiper-slide"
     PopularCardRender(this.path, this.selector, this.addedClasses)
     sliderFeature()
+    AddItemToCart()
   }
 }

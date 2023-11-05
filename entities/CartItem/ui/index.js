@@ -1,6 +1,6 @@
 import { commonComponentProps, getAttrs } from "../../../shared/lib/index.js";
 
-export const CardTemplate = (props) => {
+export const CartItem = (props) => {
 
     const {
         extraClasses = {},
@@ -26,7 +26,7 @@ export const CardTemplate = (props) => {
                 <p class="${getClassName("info")}">${cardReg}</p>
                 <p class="${getClassName("info")}">${courseStartDate}</p>
             </div>
-            <svg class="icon" width="20" height="20">
+            <svg class="cart__item__icon icon" width="20" height="20">
                 <use xlink:href="icons/icons.svg#close"></use>
             </svg>
         </div>

@@ -12,9 +12,9 @@ export default () => {
         ${Header()}
         ${Cart()}
         <a href="catalog.html">
-        <svg class="icon" width="24" height="24">
-        <use xlink:href="icons/icons.svg#arrow-left"></use>
-        </svg>
+            <svg class="icon" width="24" height="24">
+            <use xlink:href="icons/icons.svg#arrow-left"></use>
+            </svg>
         Продолжить покупки</a>
         ${Footer()}
         `

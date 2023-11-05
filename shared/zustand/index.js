@@ -2,14 +2,14 @@ import { createStore } from "zustand/vanilla"
 import { persist, createJSONStorage } from "zustand/middleware"
 
 const useCartStore = createStore(persist((set, get) => ({
-        ProductsArray: [],
-        addItemToCart: () => set({ array: get().array.push() }),
-        deleteItemFromCart: () => set({ array: get().array.splice() })
+        productsArray: [],
+        addItemToCart: () => set({ productsArray: get().productsArray.push() }),
+        deleteItemFromCart: () => set({ productsArray: get().productsArray.splice() })
       }),{
         name: "cart-storage",
         storage: createJSONStorage(() => localStorage), 
       }
     )
   )
-const { getState, setState, subscribe } = useCartStore
+  const { getState, setState, subscribe } = useCartStore
 export default useCartStore

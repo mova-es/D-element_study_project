@@ -1,23 +1,18 @@
-import { CardTemplate } from "../../entities/productCard/ui/index.js";
+import { CardTemplate } from "../../entities/productCard/ui/index.js" 
 
-export async function PopularCardRender(path, selector, addedClasses) {
-  const response = await fetch(path).then((res) => res.json());
+export async function PopularCardRender (path, selector, addedClasses) {
+    const cardsEl = document.querySelector(selector)
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const cardsEl = document.querySelector(selector);
-    const productsArray = [];
-    response.goods.data.forEach((item) => {
-      if (item.isPopular === true) {
-        productsArray.push(
-          CardTemplate({
+    const productsArray = []
+    const response = await fetch(path).then(res => res.json())
+    response.goods.data.forEach(item => {
+        if(item.isPopular === true) {
+          productsArray.push(CardTemplate({
             img: item.imageSrc,
             cardLabel: item.label,
             cardName: item.productName,
-            additionalClasses: addedClasses,
-          })
-        );
-      }
-    });
-    cardsEl.innerHTML = productsArray.join("");
-  });
+            additionalClasses: addedClasses
+        }))  
+    } })
+    cardsEl.innerHTML = productsArray.join("")
 }
