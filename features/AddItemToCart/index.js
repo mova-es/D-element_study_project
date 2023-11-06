@@ -7,14 +7,22 @@ export function AddItemToCart () {
     })
     connection?.init(useCartStore.getState())
 
-    document.addEventListener("DOMContentLoaded", function (e) {
+
+    setTimeout(() => {
         const btnEls = document.querySelectorAll(".btn")
         console.log(btnEls)
+    }, 3000);
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     const btnEls = document.querySelectorAll(".btn")
+    //     console.log(btnEls)
+        
+    //     btnEls.forEach(btn => {
+    //       btn.addEventListener("click", function (e) {
+    //         useCartStore.setState({ id: btn.id })
+    //     });
+  
+    //     })
 
-        btnEls.forEach(btn => {
-        btn.addEventListener("click", function(e) {
-            console.log(e.target)
-        });
-    })
-    })
+        
+    // })
 }

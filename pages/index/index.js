@@ -9,8 +9,7 @@ export default () => {
     body: `
         ${Header()}
             <div class="hero">
-                <div class="container">
-                    <h1>Популярные товары</h1>
+                <div class="container hero__container">
                     ${Popular()}
                     <div class="hero__about_us">
                         <div class="hero__about_us__general_information">
@@ -23,11 +22,13 @@ export default () => {
                         <div class="hero__about_us__courses">
                             <h2>Как пройти курс</h2>
                             <div class="hero__about_us__courses-information">
+                            <div class="hero__about_us__courses-information__text">  
                                 <p>Записывайтесь и&nbsp;получайте новые знания! Делайте репост и&nbsp;отправляйте друзьям, которым эта новость будет полезна.</p>
                                 <h3>Ждем вас на&nbsp;наших курсах!</h3>
-                            </div>
+                            </div>    
                             <div class="hero__about_us__courses-qr">
-                            <img src="/images/qr-code.png">
+                                <img src="/images/qr-code.png">
+                            </div>
                             </div>
                         </div>
                     </div>

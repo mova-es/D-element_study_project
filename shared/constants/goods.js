@@ -60,7 +60,7 @@ export const goods = {
     {
       "ProductId": "5",
       "label": "Бесплатный офлайн курс",
-      "productName": "«Инфраструктура/Администрирование»",
+      "productName": "«Инфраструктура»",
       "category": "infrastructure",
       "imageSrc": "/images/infrastructure.png",
       "registration": {

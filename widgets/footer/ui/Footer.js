@@ -13,7 +13,7 @@ export function Footer(props) {
 
     return `
         <footer  class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-footer="" >
-            
+            <div class="container footer__container">
             <div class="${getClassName("main")}">
                 <ul>
                     <li>
@@ -52,6 +52,8 @@ export function Footer(props) {
                     </dl>
                 </div>
             </div>
+            </div>
+            
         </footer>
          `
 }

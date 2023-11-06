@@ -14,6 +14,7 @@ export function Header(props) {
 
     return `
             <header  class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-header="" >
+            <div class="container header__container">
             <div class="${getClassName("logo", { isValid: true })}">
                 ${Logo({ imgSrc: "/icons/logo.svg" })}
             </div>
@@ -26,9 +27,15 @@ export function Header(props) {
                         <a href="/catalog.html">Каталог</a>
                     </li>
                     <li>
-                        <a class="${getClassName("cart")}" href="/cart.html">Корзина</a>
+                        <a class="${getClassName("cart")}" href="/cart.html">
+                        <svg class="icon" width="24" height="24">
+                        <use xlink:href="icons/icons.svg#shopping-cart"></use>
+                        </svg>
+                        <span>Корзина</span>
+                        </a>
                     </li>
                 </ul>
+            </div>
             </div>
             </header>
             `

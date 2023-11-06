@@ -2,6 +2,8 @@ import HeaderModel from "../../widgets/header/model/index.js"
 import FilterModel from "../../widgets/filter/model/index.js"
 import PopularModel from "../../widgets/popular/model/index.js"
 import CartModel from "../../widgets/cart/model/index.js"
+import { AddItemToCart } from "../../features/AddItemToCart/index.js"
+
 
 export const runApp = async () => {
     const runWidgets = async () => {
@@ -9,6 +11,7 @@ export const runApp = async () => {
         new FilterModel()
         new PopularModel()
         new CartModel()
+        AddItemToCart()
         await Promise.all(Object.keys(import.meta.glob("../../**/*.pcss", { "query": "?inline" })).map(path => import(`${path}`).then((module) => module?.default ?? module)))
     }
     switch (process.env.NODE_ENV) {

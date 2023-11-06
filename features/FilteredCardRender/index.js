@@ -9,6 +9,7 @@ export async function FilteredCardRender (path, selector, addedClasses) {
             img: item.imageSrc,
             cardLabel: item.label,
             cardName: item.productName,
+            productId: item.ProductId,
             additionalClasses: addedClasses
         })))
     cardsEl.innerHTML = productsArray.join("")

@@ -11,7 +11,8 @@ export const CardTemplate = (props) => {
         img,
         cardLabel,
         cardName,
-        additionalClasses
+        additionalClasses,
+        productId
     } = { ...commonComponentProps, ...props }
 
     const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
@@ -26,7 +27,7 @@ export const CardTemplate = (props) => {
                 label: "В&nbsp;корзину",
                 extraAttrs: {
                     "data-js-require": true,
-                    "id": "card_btn"
+                    "id": `${productId}`
                 },
                 extraClasses: {
                     isHidden: false,

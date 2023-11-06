@@ -11,6 +11,7 @@ export async function PopularCardRender (path, selector, addedClasses) {
             img: item.imageSrc,
             cardLabel: item.label,
             cardName: item.productName,
+            productId: item.ProductId,
             additionalClasses: addedClasses
         }))  
     } })

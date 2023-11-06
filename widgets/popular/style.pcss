@@ -1,11 +1,115 @@
-.popular {
-    padding-left: 50px;
-    overflow-x: hidden;
-    padding-top: 50px;
+@custom-media --small (max-width: 768px);
+@custom-media --medium (max-width: 1024px);
+@custom-media --large (max-width: 1440px);
+@custom-media --extralarge (max-width: 2560px);
 
-    &__cards {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
+.hero {
+  padding: 56px 30px 116px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-image: url("/images/background.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 720px;
+
+    @media (--small) {
+      max-width: 720px;
     }
+
+    @media (--medium) {
+      max-width: 980px;
+    }
+
+    @media (--large) {
+      max-width: 1408px;
+    }
+    @media (--extralarge) {
+      max-width: 1408px;
+    }
+  }
+
+  &__about_us {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+
+    &__general_information {
+        max-width: 568px;
+        align-self: stretch;
+
+        & h2 {
+            margin-bottom: 40px;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        & h3 {
+            margin-bottom: 16px;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--blue);
+        }
+
+        & p {
+            font-size: 16px;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__courses {
+        max-width: 688px;
+        align-self: stretch;
+
+        & h2 {
+            margin-bottom: 40px;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        &-information {
+            display: flex;
+            padding: 45px;
+            align-items: flex-start;
+            gap: 37px;
+            background-color: var(--white);
+            border-radius: 12px;
+
+            & p {
+                margin-bottom: 16px;
+            }
+
+            & h3 {
+                font-size: 28px;
+                color: var(--blue);
+            }
+        }
+
+        &-qr {
+            width: 140px;
+            height: 140px;
+        }
+    }
+  }
+}
+
+.popular {
+  overflow-x: hidden;
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &__heading {
+    position: relative;
+  }
 }
