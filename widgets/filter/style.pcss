@@ -3,20 +3,6 @@
 @custom-media --large (min-width: 1025px) and (max-width: 1440px);
 @custom-media --extralarge (max-width: 2560px);
 
-.breadcrumb ul {
-    display: flex;
-
-    & li+li::before {
-    padding: 8px;
-    color: var(--grey);
-    content: "/\00a0";
-    }
-
-    & a {
-        color: var(--grey); 
-    }
-}
-
 .catalog {
     padding: 24px 30px 120px 30px;
 
@@ -42,7 +28,7 @@
 
       &__main {
         display: grid;
-        grid-template-columns: 350px 1fr;
+        grid-template-columns: 300px 1fr;
       }
     
     &__heading {
@@ -50,24 +36,28 @@
     }
 
     &__filter {
-        padding: 30px;
         display: flex;
         flex-direction: column;
         gap: 15px;
-        width: 350px;
+        width: 300px;
         align-items: flex-start;
 
         & label {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--blue);
-            padding: 12px 24px;
-            background-color: var(--lightblue);
-            border-radius: 100px;
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--blue);
+          padding: 12px 24px;
+          background-color: var(--lightblue);
+          border-radius: 100px;
+
+          &:first-child {
+            color: var(--white);
+            background-color: var(--blue);
+          }
         }
 
         & input {
-            display: none;
+          display: none;
         }
     }
 

@@ -10,19 +10,11 @@ export function AddItemToCart () {
 
     setTimeout(() => {
         const btnEls = document.querySelectorAll(".btn")
-        console.log(btnEls)
-    }, 3000);
-    // document.addEventListener("DOMContentLoaded", () => {
-    //     const btnEls = document.querySelectorAll(".btn")
-    //     console.log(btnEls)
-        
-    //     btnEls.forEach(btn => {
-    //       btn.addEventListener("click", function (e) {
-    //         useCartStore.setState({ id: btn.id })
-    //     });
-  
-    //     })
-
-        
-    // })
+        btnEls.forEach(btn => {
+            btn.addEventListener("click",function (e) {
+                console.log(e.target)
+                // useCartStore.setState({ id: btn.id })
+            });
+        });
+    }, 2000);
 }

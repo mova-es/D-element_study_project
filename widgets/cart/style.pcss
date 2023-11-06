@@ -1,0 +1,41 @@
+@custom-media --small (max-width: 768px);
+@custom-media --medium (max-width: 1024px);
+@custom-media --large (max-width: 1440px);
+@custom-media --extralarge (max-width: 2560px);
+
+.cart {
+    padding: 24px 30px 120px 30px;
+
+    &__container {
+      margin: 0 auto;
+      max-width: 1408px;
+
+      @media (--small) {
+        max-width: 720px;
+      }
+
+      @media (--medium) {
+        max-width: 980px;
+      }
+
+      @media (--large) {
+        max-width: 1408px;
+      }
+      @media (--extralarge) {
+        max-width: 1408px;
+      }  
+    }
+
+    &__heading {
+        padding-top: 56px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--blue);
+        font-size: 22px;
+        font-weight: 600;
+    }
+}

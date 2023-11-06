@@ -62,6 +62,20 @@ label {
   width: 100%;
 }
 
+.breadcrumb ul {
+  display: flex;
+
+  & li+li::before {
+  padding: 8px;
+  color: var(--grey);
+  content: "/\00a0";
+  }
+
+  & a {
+      color: var(--grey); 
+  }
+}
+
 .swiper-button-prev {
   position: absolute;
   top: 35px;
@@ -100,4 +114,12 @@ label {
   &::after {
     display: none;
   }
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }

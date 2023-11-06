@@ -5,7 +5,7 @@ export function Button (props) {
     const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
 
     return `<button class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)}>
-        ${children || `<span class="${getClassName("label")}">${label}</span>`}
+        ${children || `${label}`}
         </button>
     `
 }

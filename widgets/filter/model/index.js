@@ -32,6 +32,15 @@ export default class FilterModel {
       input.addEventListener("change", (e) => {
         if (e.target.value !== "all" && e.target.checked === true) {
           this.inputs[0].checked = false
+          this.inputs[0].parentElement.style.cssText = `
+          background-color: #D7E8FF;
+          color: #1C6CD5;
+          `
+
+          e.target.parentElement.style.cssText = `
+          background-color: #1C6CD5;
+          color: #FFF;
+          `
           this.url.searchParams.append("id", `${this.getSearchParam(e.target)}`)
           FilteredCardRender(this.url, this.selector, this.addedClasses)
 
@@ -39,8 +48,17 @@ export default class FilterModel {
           this.url.searchParams.delete("id", `${this.getSearchParam(e.target)}`)
           FilteredCardRender(this.url, this.selector, this.addedClasses)
 
+          e.target.parentElement.style.cssText = `
+          background-color: #D7E8FF;
+          color: #1C6CD5;
+          `
+
         } else if (e.target.value === "all" && e.target.checked === true) {
           CardRender(this.path, this.selector, this.addedClasses)
+          e.target.parentElement.style.cssText = `
+          background-color: #1C6CD5;
+          color: #FFF;
+          `
         }
       })
     })
