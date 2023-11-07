@@ -1,5 +1,5 @@
 import { Swiper } from "swiper";
-import { Navigation } from "swiper/modules"
+import { Navigation, Autoplay } from "swiper/modules"
 
 const params = {
     spaceBetween: 20,
@@ -13,7 +13,7 @@ const params = {
         prevEl: ".swiper-button-prev",
       },
     slidesPerView: 2,
-    modules: [ Navigation ]
+    modules: [ Navigation, Autoplay ]
 };
 
 export const slidersInit = (selectorSlider, newParams) => {

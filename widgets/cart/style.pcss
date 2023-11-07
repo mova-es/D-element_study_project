@@ -4,38 +4,97 @@
 @custom-media --extralarge (max-width: 2560px);
 
 .cart {
-    padding: 24px 30px 120px 30px;
+  padding: 24px 30px 120px 30px;
 
-    &__container {
-      margin: 0 auto;
+  &__container {
+    margin: 0 auto;
+    max-width: 1408px;
+
+    @media (--small) {
+      max-width: 720px;
+    }
+
+    @media (--medium) {
+      max-width: 980px;
+    }
+
+    @media (--large) {
       max-width: 1408px;
+    }
+    @media (--extralarge) {
+      max-width: 1408px;
+    }
+  }
 
-      @media (--small) {
-        max-width: 720px;
-      }
+  &__heading {
+    padding-top: 56px;
+  }
 
-      @media (--medium) {
-        max-width: 980px;
-      }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--blue);
+    font-size: 22px;
+    font-weight: 600;
+    transition: transform 1s ease-in;
+    margin-top: 40px;
 
-      @media (--large) {
-        max-width: 1408px;
-      }
-      @media (--extralarge) {
-        max-width: 1408px;
-      }  
+    &:hover {
+      transform: scale(1.1) translate(5%, 0);
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 410px;
+    gap: 48px;
+  }
+
+  &__item {
+    display: flex;
+    padding: 20px;
+    gap: 32px;
+    background-color: var(--lightgrey);
+    border-radius: 12px;
+    max-width: 960px;
+    position: relative;
+
+    &__icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
     }
 
-    &__heading {
-        padding-top: 56px;
+    & img {
+      width: 188px;
     }
 
-    &__link {
-        display: flex;
-        align-items: center;
-        gap: 16px;
+    &__label {
+      line-height: 24px;
+    }
+
+    &__name {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 4px;
+      margin-bottom: 23px;
+      line-height: 28px;
+    }
+
+    &__info {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+
+      & span {
         color: var(--blue);
-        font-size: 22px;
-        font-weight: 600;
+      }
+
+      &:last-child {
+        margin-top: 8px;
+      }
     }
+  }
 }

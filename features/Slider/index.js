@@ -1,6 +1,7 @@
 import { slidersInit } from "../../shared/lib/slider.js";
 import "swiper/css"
 import "swiper/css/navigation"
+import "swiper/css/autoplay"
 
 export function sliderFeature() {
   slidersInit(".popular", {

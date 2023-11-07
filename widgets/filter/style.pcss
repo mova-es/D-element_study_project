@@ -49,10 +49,15 @@
           padding: 12px 24px;
           background-color: var(--lightblue);
           border-radius: 100px;
+          transition: transform ease-out 1000ms;
 
           &:first-child {
             color: var(--white);
             background-color: var(--blue);
+          }
+          
+          &:hover {
+            transform: scale(1.1);
           }
         }
 

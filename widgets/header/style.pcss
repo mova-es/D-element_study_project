@@ -43,10 +43,19 @@
     &__nav a {
       font-size: 14px;
       text-transform: uppercase;
+      
 
       &:last-child {
         font-size: 16px;
       }
+    }
+
+    &__nav li {
+      transition: transform 1s ease-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
     }
 
     &__cart {

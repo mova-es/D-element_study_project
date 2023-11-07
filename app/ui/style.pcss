@@ -14,6 +14,7 @@
   --black: #222;
   --grey: #888;
   --lightblue: #D7E8FF;
+  --lightgrey: #F2F3F4;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 }
 
 a, p {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--black);
   text-decoration: none;
 }
@@ -79,16 +80,21 @@ label {
 .swiper-button-prev {
   position: absolute;
   top: 35px;
-  right: 83px;
+  right: 90px;
   left: auto;
   height: 64px;
   width: 64px;
   border-radius: 40px;
   background-color: var(--white);
   padding: 20px;
+  color: var(--black);
 
   &:hover {
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.20);
+  }
+
+  &:active {
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.7);
   }
   
 
@@ -106,9 +112,14 @@ label {
   border-radius: 40px;
   background-color: var(--white);
   padding: 20px;
+  color: var(--black);
 
   &:hover {
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.20);
+  }
+
+  &:active {
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.7);
   }
 
   &::after {

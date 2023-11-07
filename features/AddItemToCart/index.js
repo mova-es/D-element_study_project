@@ -7,13 +7,22 @@ export function AddItemToCart () {
     })
     connection?.init(useCartStore.getState())
 
+    function AddFunction() {
+        const push = useCartStore((state) => state.AddToCart)
+        return push
+    }
+
+    function deleteFunction() {
+        const deleteFunc = useCartStore((state) => state.deleteFromCart)
+        return deleteFunc
+    }
 
     setTimeout(() => {
         const btnEls = document.querySelectorAll(".btn")
         btnEls.forEach(btn => {
             btn.addEventListener("click",function (e) {
                 console.log(e.target)
-                // useCartStore.setState({ id: btn.id })
+                useCartStore.setState({ productArray: btn.id })
             });
         });
     }, 2000);
