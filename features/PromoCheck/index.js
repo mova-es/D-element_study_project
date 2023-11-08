@@ -1,7 +1,7 @@
 
 
 export async function PromoCheck(path, sum) {
-    const inputEl = document.querySelector("input")
+    const inputEl = document.querySelector(".promo-input")
     const applyBtn = document.querySelector(".apply-btn")
     const totalSum = document.querySelector(".total")
     let count = 0

@@ -6,6 +6,11 @@ export async function FormRender (filteredArray, selector) {
     let sum = 0
     const path = "/promo"
 
+    const namesArray = []
+    filteredArray.forEach(element => {
+        namesArray.push(element.productName)
+    })
+
     if (filteredArray.length !== 0) {
         filteredArray.forEach(element => {
         sum = sum + element.price
@@ -14,7 +19,8 @@ export async function FormRender (filteredArray, selector) {
        cartFormEl.innerHTML = Form({
         count: filteredArray.length,
         sum: sum,
-        totalSum: sum
+        totalSum: sum,
+        goods: namesArray
        })
     } else {
         cartFormEl.innerHTML = Form({

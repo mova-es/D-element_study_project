@@ -1,4 +1,5 @@
 import { CartItemRender } from "../../../features/CartRender";
+import { FormHandle } from "../../../features/FormHandle/index.js";
 
 export default class CartModel {
   static selectors = {
@@ -15,5 +16,8 @@ export default class CartModel {
     this.selector = ".cart__items"
     this.path = "/catalog"
     CartItemRender(this.path, this.selector)
+    
+    setTimeout(() => FormHandle(), 1000);
+    
   }
 }
