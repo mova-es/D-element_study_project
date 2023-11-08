@@ -14,5 +14,4 @@ export async function CardRender (path, selector, addedClasses) {
         })))
     cardsEl.innerHTML = productsArray.join("")
 
-    AddItemToCart()
 }

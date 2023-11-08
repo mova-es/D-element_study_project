@@ -1,4 +1,4 @@
-import { CartItemRender } from "../../../features/CartItemRender";
+import { CartItemRender } from "../../../features/CartRender";
 
 export default class CartModel {
   static selectors = {

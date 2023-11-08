@@ -33,7 +33,7 @@ export function Cart(props) {
                     <div class="${getClassName("items", extraClasses)}">
                     </div>
                     <div class="${getClassName("form", extraClasses)}">
-                    ${Form()}
+                    
                     </div>
                 </div>
                 <a class="${getClassName("link", extraClasses)}" href="catalog.html">

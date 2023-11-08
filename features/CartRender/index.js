@@ -1,12 +1,13 @@
 import { CartItem } from "../../entities/CartItem/ui/index.js";
 import useCartStore from "../../shared/zustand/index.js";
-
+import { FormRender } from "../CartFormRender/index.js";
 
 export async function CartItemRender (path, selector) {
     const cartItemsEl = document.querySelector(selector)
     const productsArrayToRender = []
     const listOfGoodsIds = useCartStore.getState().products
     const filteredGoods = []
+    const formSelector = ".cart__form"
 
     const receivedData = await fetch(path).then(res => res.json())
 
@@ -17,7 +18,7 @@ export async function CartItemRender (path, selector) {
         }
       }
     }
-    
+
     if (filteredGoods.length !== 0) {
        filteredGoods.forEach(item => productsArrayToRender.push(CartItem({
         img: item.imageSrc,
@@ -32,5 +33,6 @@ export async function CartItemRender (path, selector) {
     } else {
     cartItemsEl.innerHTML = `<p>Товары не добавлены в корзину</p>`
     }
-    
+
+    FormRender(filteredGoods, formSelector)
 }
