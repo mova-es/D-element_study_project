@@ -12,13 +12,17 @@ export function Form (props) {
             <p class="form__sum">${sum}<span> ₽</span></p>
         </div>
         <p>Промокод</p>
-        <input type="text" placeholder="Введите промокод">
+        <div class="input__container">
+            <input class="promo-input" type="text" placeholder="Введите промокод">
+            <a class="apply-btn hide">Применить</a>
+        </div>
         <div class="form__total-sum">
             <p class="form__text">Итоговая сумма</p>
-            <p class="form__sum">${totalSum}<span> ₽</span></p>
+            <p class="form__sum total">${totalSum}<span> ₽</span></p>
         </div>
             ${Button({
                 label: "Оформить заказ",
+                extraClasses: "form"
             })}
         </form>
     `

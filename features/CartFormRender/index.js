@@ -1,9 +1,10 @@
 import { Form } from "../../shared/ui/form/index.js"
-
+import { PromoCheck } from "../PromoCheck/index.js";
 
 export async function FormRender (filteredArray, selector) {
     const cartFormEl = document.querySelector(selector)
     let sum = 0
+    const path = "/promo"
 
     if (filteredArray.length !== 0) {
         filteredArray.forEach(element => {
@@ -22,4 +23,5 @@ export async function FormRender (filteredArray, selector) {
             totalSum: 0
            })
     }
+    PromoCheck(path, sum)
 }

@@ -1,11 +1,18 @@
 import { rest } from "msw"
 import { goods } from "../constants/goods.js"
+import { promo } from "../constants/promo.js"
 
 export const handlers = [
 
-  rest.post("/cart/:id", (req, res, ctx) => {
+  rest.post("/cart", (req, res, ctx) => {
     return res(
       ctx.status(200)
+    )
+  }),
+
+  rest.get("/promo", (req, res, ctx) => {
+    return res(
+      ctx.status(200), ctx.json({ promo })
     )
   }),
 
