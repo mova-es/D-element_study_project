@@ -3,7 +3,7 @@ import FilterModel from "../../widgets/filter/model/index.js"
 import PopularModel from "../../widgets/popular/model/index.js"
 import CartModel from "../../widgets/cart/model/index.js"
 import { AddItemToCart } from "../../features/AddItemToCart/index.js"
-
+import { DeleteItemFromCart } from "../../features/DeleteItemFromCart/index.js"
 
 export const runApp = async () => {
     const runWidgets = async () => {
@@ -12,6 +12,7 @@ export const runApp = async () => {
         new PopularModel()
         new CartModel()
         AddItemToCart()
+        // DeleteItemFromCart
         await Promise.all(Object.keys(import.meta.glob("../../**/*.pcss", { "query": "?inline" })).map(path => import(`${path}`).then((module) => module?.default ?? module)))
     }
     switch (process.env.NODE_ENV) {

@@ -1,5 +1,5 @@
-@custom-media --small (max-width: 768px);
-@custom-media --medium (max-width: 1024px);
+@custom-media --small (max-width: 899px);
+@custom-media --medium (min-width: 900px) and (max-width: 1024px);
 @custom-media --large (max-width: 1440px);
 @custom-media --extralarge (max-width: 2560px);
 
@@ -47,8 +47,16 @@
 
   &__main {
     display: grid;
-    grid-template-columns: 1fr 410px;
+    grid-template-columns: 1fr 400px;
     gap: 48px;
+
+    @media (--small) {
+      display: flex;
+    }
+
+    @media (--medium) {
+      grid-template-columns: 1fr 300px;
+    }
   }
 
   &__item {
@@ -59,6 +67,11 @@
     border-radius: 12px;
     max-width: 960px;
     position: relative;
+    margin-bottom: 24px;
+
+    @media (--small) {
+      flex-direction: column;
+    }
 
     &__icon {
       position: absolute;

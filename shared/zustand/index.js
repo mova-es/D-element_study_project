@@ -1,15 +1,16 @@
 import { createStore } from "zustand/vanilla"
-import { persist, createJSONStorage } from "zustand/middleware"
+import { immer } from "zustand/middleware/immer"
+import { persist, createJSONStorage, devtools } from "zustand/middleware"
 
-const useCartStore = createStore(persist((set, get) => ({
-        productsArray: [],
-        addToCart: () => set({ productsArray: get().productsArray.push() }),
-        deleteFromCart: () => set({ productsArray: get().productsArray.splice() })
+const useCartStore = createStore()(devtools(immer(persist((set, get) => ({
+        products: [],
+        addToCart: (id) => set({ products: get().products.push(id) }),
+        deleteFromCart: (id) => set({ products: get().products.filter(item => item !== id) })
       }),{
         name: "cart-storage",
         storage: createJSONStorage(() => localStorage), 
       }
     )
-  )
-  const { getState, setState, subscribe, addTocart, deleteFromCart } = useCartStore
+  )))
+  const { getState, setState, subscribe } = useCartStore
 export default useCartStore

@@ -10,7 +10,8 @@ export const CartItem = (props) => {
         img,
         cardLabel,
         cardName,
-        cardReg,
+        cardRegStart,
+        cardRegEnd,
         courseStartDate,
         additionalClasses
     } = { ...commonComponentProps, ...props }
@@ -23,10 +24,10 @@ export const CartItem = (props) => {
             <div class="${getClassName("description")}">
                 <p class="${getClassName("label")}">${cardLabel}</p>
                 <p class="${getClassName("name")}">${cardName}</p>
-                <p class="${getClassName("info")}">Регистрация на курс: <span>${cardReg}</span></p>
+                <p class="${getClassName("info")}">Регистрация на курс: <span>${cardRegStart} - ${cardRegEnd}</span></p>
                 <p class="${getClassName("info")}">Начало курса: <span>${courseStartDate}</span></p>
             </div>
-            <svg class="cart__item__icon icon" width="20" height="20">
+            <svg class="cart__item__icon icon delete" width="20" height="20">
                 <use xlink:href="icons/icons.svg#close"></use>
             </svg>
         </div>

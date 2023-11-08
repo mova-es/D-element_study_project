@@ -8,10 +8,10 @@ export const goods = {
       "category": "front",
       "imageSrc": "/images/front.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "01.02.2024",
+              "endDate": "10.02.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "12.02.2024",
       "price": 10000,
       "isPopular": true
     },
@@ -22,10 +22,10 @@ export const goods = {
       "category": "back",
       "imageSrc": "/images/back.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.04.2024",
+              "endDate": "20.04.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.04.2024",
       "price": 10000,
       "isPopular": true
     },
@@ -36,10 +36,10 @@ export const goods = {
       "category": "management",
       "imageSrc": "/images/project.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.05.2024",
+              "endDate": "20.05.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.05.2024",
       "price": 10000,
       "isPopular": false
     },
@@ -50,10 +50,10 @@ export const goods = {
       "category": "analysis",
       "imageSrc": "/images/front.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.05.2024",
+              "endDate": "20.05.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.05.2024",
       "price": 10000,
       "isPopular": false
     },
@@ -64,10 +64,10 @@ export const goods = {
       "category": "infrastructure",
       "imageSrc": "/images/infrastructure.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.06.2024",
+              "endDate": "20.06.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.06.2024",
       "price": 10000,
       "isPopular": true
     },
@@ -78,10 +78,10 @@ export const goods = {
       "category": "mobile",
       "imageSrc": "/images/back.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.07.2024",
+              "endDate": "20.07.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.07.2024",
       "price": 10000,
       "isPopular": false
     },
@@ -92,10 +92,10 @@ export const goods = {
       "category": "front",
       "imageSrc": "/images/front.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.05.2024",
+              "endDate": "20.05.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.05.2024",
       "price": 10000,
       "isPopular": false
     },
@@ -106,10 +106,10 @@ export const goods = {
       "category": "back",
       "imageSrc": "/images/back.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.05.2024",
+              "endDate": "20.05.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.05.2024",
       "price": 10000,
       "isPopular": true
     },
@@ -120,10 +120,10 @@ export const goods = {
       "category": "management",
       "imageSrc": "/images/project.png",
       "registration": {
-              "startDate": "298347302984",
-              "endDate": "239847320984"
+              "startDate": "15.05.2024",
+              "endDate": "20.05.2024"
       },
-      "startCourse": "2389047320",
+      "startCourse": "22.05.2024",
       "price": 10000,
       "isPopular": true
     }

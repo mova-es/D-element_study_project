@@ -36,7 +36,6 @@ export default class FilterModel {
           background-color: #D7E8FF;
           color: #1C6CD5;
           `
-
           e.target.parentElement.style.cssText = `
           background-color: #1C6CD5;
           color: #FFF;

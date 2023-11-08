@@ -3,7 +3,7 @@ import { goods } from "../constants/goods.js"
 
 export const handlers = [
 
-  rest.post("/cartSubmit", (req, res, ctx) => {
+  rest.post("/cart/:id", (req, res, ctx) => {
     return res(
       ctx.status(200)
     )

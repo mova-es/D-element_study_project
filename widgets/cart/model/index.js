@@ -1,4 +1,4 @@
-// import { CardRender } from "../../../features/CardRender/index.js";
+import { CartItemRender } from "../../../features/CartItemRender";
 
 export default class CartModel {
   static selectors = {
@@ -12,10 +12,8 @@ export default class CartModel {
       return CartModel.instance;
     }
     this.instance = document.querySelector(CartModel.selectors.instanceSelector)
-    // this.selector = ".catalog__cards"
-    // this.path = "/catalog"
-    // this.addedClasses = ""
-    // CardRender(this.path, this.selector, this.addedClasses)
+    this.selector = ".cart__items"
+    this.path = "/catalog"
+    CartItemRender(this.path, this.selector)
   }
-  
 }

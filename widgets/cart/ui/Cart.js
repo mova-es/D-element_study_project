@@ -1,6 +1,8 @@
 import { commonComponentProps, getAttrs } from "../../../shared/lib/index.js";
 import { Form } from "../../../shared/ui/form/index.js";
 import { CartItem } from "../../../entities/CartItem/ui/index.js";
+import useCartStore from "../../../shared/zustand/index.js";
+import { goods } from "../../../shared/constants/goods.js";
 
 export function Cart(props) {
 
@@ -12,6 +14,10 @@ export function Cart(props) {
     } = { ...commonComponentProps, ...props }
 
     const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
+
+    // const result = useCartStore.getState().products.id
+    // const resultCard = goods.data.filter(item => item.ProductId === result)
+    // console.log(resultCard)
 
     return `
         <section class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-cart="" >
@@ -25,14 +31,6 @@ export function Cart(props) {
                 <h1 class="${getClassName("heading", extraClasses)}">Корзина</h1>
                 <div class="${getClassName("main", extraClasses)}">
                     <div class="${getClassName("items", extraClasses)}">
-                    ${CartItem({
-                        img: "/images/front.png",
-                        cardLabel: "Бесплатный офлайн курс",
-                        cardName: "«Frontend-разработчик»",
-                        cardReg: "18.08.2023",
-                        courseStartDate: "26.09.2023",
-                        additionalClasses: "",
-                    })}
                     </div>
                     <div class="${getClassName("form", extraClasses)}">
                     ${Form()}

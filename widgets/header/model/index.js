@@ -1,12 +1,13 @@
 export default class HeaderModel {
-        constructor() {
-            this.selector = "[data-js-header]";
-            this.instance = null;
 
+    static selector = "[data-js-header]"
+
+    static instance = null
+
+        constructor() {
             if(HeaderModel.instance) {
                 return HeaderModel.instance
             }
             this.instance = document.querySelector(HeaderModel.selector)
-            console.debug(HeaderModel.instance);
         }
     }
