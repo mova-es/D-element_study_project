@@ -12,8 +12,12 @@ export function AddItemToCart () {
                 e.target.style.cssText = `
                 background-color: #55FF02;
                 `
-                array.push(e.target.id)
-                addToCart(array)
+                if(array.includes(e.target.id)) {
+                    alert("Товар уже в корзине")
+                } else {
+                   array.push(e.target.id)
+                addToCart(array) 
+                }
             });
         });
     }, 2000);

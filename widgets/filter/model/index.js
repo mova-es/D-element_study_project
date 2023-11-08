@@ -51,7 +51,6 @@ export default class FilterModel {
           background-color: #D7E8FF;
           color: #1C6CD5;
           `
-
         } else if (e.target.value === "all" && e.target.checked === true) {
           CardRender(this.path, this.selector, this.addedClasses)
           e.target.parentElement.style.cssText = `
