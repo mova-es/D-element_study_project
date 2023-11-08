@@ -12,7 +12,7 @@ export const runApp = async () => {
         new PopularModel()
         new CartModel()
         AddItemToCart()
-        // DeleteItemFromCart
+        DeleteItemFromCart()
         await Promise.all(Object.keys(import.meta.glob("../../**/*.pcss", { "query": "?inline" })).map(path => import(`${path}`).then((module) => module?.default ?? module)))
     }
     switch (process.env.NODE_ENV) {

@@ -13,13 +13,14 @@ export const CartItem = (props) => {
         cardRegStart,
         cardRegEnd,
         courseStartDate,
-        additionalClasses
+        additionalClasses,
+        productId
     } = { ...commonComponentProps, ...props }
 
     const getClassName = (elem, mod) => getCN(baseClass, elem, mod)
 
     return `
-        <div class="${getClassName("", extraClasses)} ${additionalClasses}" ${getAttrs(extraAttrs)}>
+        <div class="${getClassName("", extraClasses)} ${additionalClasses}" ${getAttrs(extraAttrs)} data-id="${productId}">
             <img class="${getClassName("img")}" src="${img}">
             <div class="${getClassName("description")}">
                 <p class="${getClassName("label")}">${cardLabel}</p>

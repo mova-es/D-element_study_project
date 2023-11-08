@@ -9,7 +9,6 @@ export async function CartItemRender (path, selector) {
     const filteredGoods = []
 
     const receivedData = await fetch(path).then(res => res.json())
-    console.log(receivedData)
 
     for (let i = 0; i < receivedData.goods.data.length; i++) {
       for (let j = 0; j < listOfGoodsIds.length; j++) {
@@ -27,7 +26,7 @@ export async function CartItemRender (path, selector) {
         cardRegStart: item.registration.startDate,
         cardRegEnd: item.registration.endDate,
         courseStartDate: item.startCourse,
-        additionalClasses: "",
+        productId: item.ProductId,
     })))
     cartItemsEl.innerHTML = productsArrayToRender.join("") 
     } else {
