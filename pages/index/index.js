@@ -2,6 +2,8 @@ import { getPage } from "../../shared/lib/index.js";
 import { Header } from "../../widgets/header/index.js";
 import { Footer } from "../../widgets/footer/index.js";
 import { Popular } from "../../widgets/popular/index.js";
+import { ModalWindow } from "../../shared/ui/modalWindow/index.js";
+
 
 export default () => {
   return getPage({
@@ -35,6 +37,9 @@ export default () => {
                 </div>
             </div>
             ${Footer()}
+            ${ModalWindow({
+                message: "Товар уже в корзине"
+            })}
         `,
   });
 };

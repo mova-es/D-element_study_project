@@ -1,3 +1,5 @@
+import { showMessage } from "../ShowMessage/index.js"
+
 export async function FormHandle() {
 
     async function sendData(data) {
@@ -12,17 +14,13 @@ export async function FormHandle() {
         return new FormData(formNode)
       }
 
-    function onSuccess(formNode) {
-        alert("Ваша заявка отправлена!")
-    }
-    
     async function handleFormSubmit(event) {
         event.preventDefault()
         const data = serializeForm(event.target)
         const response = await sendData(data)
         
         if(response.status === 200) {
-           onSuccess(event.target) 
+           showMessage()
         }
       }
       

@@ -1,0 +1,38 @@
+.modal {
+    padding: 60px;
+    visibility: hidden;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  
+    &__main {
+      position: relative;
+      padding: 40px;
+      background: var(--white);
+      box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+      border-radius: 10px;
+      z-index: 10;
+    }
+  
+    &__close {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      background-image: url("/icons/close.svg");
+      width: 24px;
+      height: 24px;
+      border: none;
+    }
+  
+    &__message {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: $blue-01;
+    }
+}
+  

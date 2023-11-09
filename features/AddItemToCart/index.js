@@ -1,4 +1,6 @@
 import useCartStore from "../../shared/zustand/index.js"
+import { showMessage } from "../ShowMessage/index.js";
+
 
 export function AddItemToCart () {
     const array = useCartStore.getState().products
@@ -13,7 +15,7 @@ export function AddItemToCart () {
                 background-color: #55FF02;
                 `
                 if(array.includes(e.target.id)) {
-                    alert("Товар уже в корзине")
+                    showMessage()
                 } else {
                    array.push(e.target.id)
                 addToCart(array) 

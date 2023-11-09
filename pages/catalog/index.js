@@ -3,6 +3,8 @@ import { Filter } from "../../widgets/filter/index.js";
 import { Header } from "../../widgets/header/index.js";
 import { Footer } from "../../widgets/footer/index.js";
 import { cat } from "../../shared/constants/cat.js";
+import { ModalWindow } from "../../shared/ui/modalWindow/index.js";
+
 
 export default () => {
   return getPage({
@@ -27,6 +29,9 @@ export default () => {
         </div>
         </section>
         ${Footer()}
+        ${ModalWindow({
+          message: "Товар уже в корзине"
+        })}
         `,
   });
 };
