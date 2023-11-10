@@ -1,4 +1,5 @@
 import { CardTemplate } from "../../entities/productCard/ui/index.js" 
+import { AddItemToCart } from "../AddItemToCart/index.js"
 
 export async function PopularCardRender (path, selector, addedClasses) {
     const cardsEl = document.querySelector(selector)
@@ -16,4 +17,5 @@ export async function PopularCardRender (path, selector, addedClasses) {
         }))  
     } })
     cardsEl.innerHTML = productsArray.join("")
+    AddItemToCart()
 }
