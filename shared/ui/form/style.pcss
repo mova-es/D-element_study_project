@@ -1,0 +1,44 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 56px;
+    border-radius: 25px;
+    background: linear-gradient(114deg, #F0F2F4 50.61%, #B5FF93 99.87%), #D9D9D9;
+    max-width: 400px;
+
+    & h4 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 32px;
+    }
+
+    & input {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        padding: 8px 18px;
+        max-width: 288px;
+        height: 48px;
+        border-radius: 10px;
+        border: 1px solid rgba(34, 34, 34, 0.15);
+        background-color: var(--white);
+    }
+
+    &__sum {
+        font-weight: 700;
+    }
+
+    &__count-and-sum, &__total-sum {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__count-and-sum {
+        margin-bottom: 12px;
+    }
+
+    &__total-sum {
+        padding-top: 24px;
+        padding-bottom: 48px;
+        border-top: 1px solid rgba(0, 0, 0, 0.30);
+    }
+}
